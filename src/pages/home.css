@@ -1,0 +1,26 @@
+.description{
+    width: 25rem;
+}
+.form_calss{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+   
+}
+input{
+    width: 34rem;
+    height: 10rem;
+}
+.sub_but{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 2px 21px;
+    border: none;
+    cursor: pointer;
+    width: 8%;
+    opacity: 0.9;
+
+}

@@ -24,3 +24,14 @@ input{
     opacity: 0.9;
 
 }
+.del_but{
+    background-color: #aa2504;
+    color: white;
+    padding: 14px 20px;
+    margin: 2px 21px;
+    border: none;
+    cursor: pointer;
+    width: 8%;
+    opacity: 0.9;
+
+} 

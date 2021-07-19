@@ -1,0 +1,204 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    min-height:75px;
+    padding: 1rem;
+    background-color: #FFF5EB;
+    color: #000;
+}
+.navbar ul li {
+    justify-content: space-between;
+}
+.navbar_links{
+    display: flex;
+}
+.navbar_link{
+    padding: 0 4.5rem;
+    color: #000;
+    font-size: 16px;
+}
+.navbar_burger{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+  
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 4px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    border-radius: 1px;
+    
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+@media screen and (max-width:767px) {
+    /* .navbar{
+        color: white;
+    } */
+    .navbar_links{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+     
+        right: -100vw;
+        bottom: 0;
+        width: 0;
+        height: 100vh;
+        padding: 2rem;
+        visibility: hidden;
+        background-color: #000;
+        color: white;
+        transition: all .8s ease-out;
+    }
+    .show-nav .navbar_links{
+        width: 100vw;
+        right: 0;
+        visibility: visible;
+
+
+    }
+
+    /* somthing plus */
+    .navbar_item::after{
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 3vw;
+        height: 1px;
+        background-color: #FFF;
+    }
+    /* pour efaser la dernier dash */
+    .navbar_item:last-child::after{
+        display: none;
+
+    }
+    .navbar_link{
+        display: block;
+        padding: 1.5rem;
+        font-size: 5vw;
+        color:white;
+    }
+    .navbar_burger{
+        display: block;
+        position:fixed;
+        top:1rem;
+        right: 1rem;     
+        
+    }
+    .navbar_burger:hover{
+        cursor: pointer;
+
+    }
+    .burger-bar,
+    .burger-bar::before,
+    .burger-bar::after{
+        display:block;
+        width: 40px;
+        height: 3px;
+        position: relative;
+        border-radius: 3px;
+        background: #FFF;
+        transition: all .5s ease-in-out;
+        
+    }
+    .burger-bar::before,
+    .burger-bar::after{
+        content: "";
+        position: absolute;
+        left: 0;
+
+    }
+    .burger-bar::before{
+        transform: translateY(-12px);
+  
+      }
+      .burger-bar::after{
+          transform: translateY(12px)
+        
+  
+      }
+      .show-nav .burger-bar{
+          width: 0;
+          background:transparent;
+      }
+       /*pour trannce former le burger au crios (*) */
+ .show-nav .burger-bar::before {
+    transform: rotate(45deg);
+
+}
+.show-nav .burger-bar::after {
+   transform: rotate(-45deg);
+
+}
+
+/* burger button animetion  */
+/* .navbar_item {
+transform: scaleY(100vh);
+}
+.show-nav .navbar_item {
+transform: scaleY(0);
+   
+}
+.show-nav .slideInDown-1{
+    transition: all 1S ease-out;
+}
+.show-nav .slideInDown-2{
+    transition: all 1.1S ease-out;
+}
+.show-nav .slideInDown-3{
+    transition: all 1.2S ease-out;
+}
+.show-nav .slideInDown-4{
+    transition: all 1.3S ease-out;
+}
+.show-nav .slideInDown-5{
+    transition: all 1.4S ease-out;
+} */
+    
+}

@@ -1,0 +1,13 @@
+
+.continer_home{
+    
+    display: flex;
+    padding: 7rem 14rem 4rem;
+   
+}
+.item_home{
+    display: flex;
+    justify-content: center;
+
+
+}

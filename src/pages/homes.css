@@ -1,13 +1,17 @@
 
 .continer_home{
-    
+    padding: 6rem 1rem 1rem;
     display: flex;
-    padding: 7rem 14rem 4rem;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 8rem 17rem 3rem;
    
 }
 .item_home{
-    display: flex;
-    justify-content: center;
+    object-fit: cover;
+    object-position: 50% 50%;
 
 
 }

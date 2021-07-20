@@ -21,7 +21,7 @@ function Nav() {
 						<button className="dropbtn">
 							<li className="navbar_item" >
 								<Link to="#" className="navbar_link">
-									Sacrements et célébrations
+									CRUD
 								</Link>
 							</li>
 							<i className="fa fa-caret-down"></i>

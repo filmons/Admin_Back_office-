@@ -1,0 +1,19 @@
+.container_calss{
+    padding: 6rem 1rem 1rem;
+    display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 8rem 17rem 3rem;
+
+}
+.class_card{
+    object-fit: cover;
+    object-position: 50% 50%;
+
+
+}
+
+
+

@@ -6,6 +6,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     padding: 8rem 17rem 3rem;
+    background-color: azure;
 
 }
 .class_card{
@@ -16,4 +17,9 @@
 }
 
 
+.item{
+    border: 1px solid;
+    padding: 2% 2% 2% 2%;
+    margin: 3%;
 
+}

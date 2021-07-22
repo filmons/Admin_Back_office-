@@ -27,7 +27,7 @@ function Nav() {
 							<i className="fa fa-caret-down"></i>
 						</button>
 						<div className="dropdown-content">
-							<Link to="/EditClass">EditClass</Link>
+							<Link to="/EditClass">Add Class</Link>
 							<Link to="/show">Show</Link>
 							<Link to="/Get">Get</Link>
 							<Link to="/Calander">Calander</Link>

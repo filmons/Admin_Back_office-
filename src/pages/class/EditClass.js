@@ -92,7 +92,7 @@ class EditClass extends React.Component {
 							{" "}
 							submite
 						</button>
-						<button className="del_but"> Delete</button>
+						
 					</div>
 				</div>
 			</div>

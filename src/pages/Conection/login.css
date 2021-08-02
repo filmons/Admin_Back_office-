@@ -1,0 +1,155 @@
+.form_log {
+	padding: 6rem 1rem 1rem;
+}
+
+.lebls {
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+	padding: 24px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+.prenom:focus {
+	background-color: aqua;
+	border-bottom: red;
+}
+/* Set a style for all buttons */
+/* button  {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 9%;
+      opacity: 0.9;
+      display: flex;
+    } */
+
+button:hover {
+	opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	padding: 14px 51px;
+	background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+	float: left;
+	width: 13%;
+}
+
+/* Add padding to container elements */
+.container {
+	margin: auto;
+	border-style: solid;
+	margin-left: 25%;
+	margin-right: 25%;
+	padding: 4rem 0rem 3rem;
+}
+
+/* Clear floats */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+@media screen and (max-width: 767px) {
+	.form_log {
+		padding: 6rem 1rem 1rem;
+	}
+
+	.lebls {
+		display: flex;
+		align-content: center;
+		flex-direction: column;
+	}
+
+	input[type="text"],
+	input[type="password"] {
+		padding: 24px;
+		margin: 5px 0 22px 0;
+		display: inline-block;
+		border: none;
+		background: #f1f1f1;
+	}
+
+	input[type="text"]:focus,
+	input[type="password"]:focus {
+		background-color: #ddd;
+		outline: none;
+	}
+
+	hr {
+		border: 1px solid #f1f1f1;
+		margin-bottom: 25px;
+	}
+
+	/* Set a style for all buttons */
+	/* button  {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 9%;
+            opacity: 0.9;
+            display: flex;
+          } */
+
+	button:hover {
+		opacity: 1;
+	}
+
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+		padding: 14px 51px;
+		background-color: #f44336;
+	}
+
+	/* Float cancel and signup buttons and add an equal width */
+	.cancelbtn,
+	.signupbtn {
+		float: left;
+		width: 13%;
+	}
+
+	/* Add padding to container elements */
+	.container {
+		margin: auto;
+		border-style: solid;
+		margin-left: 25%;
+		margin-right: 25%;
+		padding: 7rem 0rem 3rem;
+	}
+
+	/* Clear floats */
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}

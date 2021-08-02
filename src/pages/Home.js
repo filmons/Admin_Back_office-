@@ -23,21 +23,16 @@ class Home extends React.Component {
             <li>2. Pour effacer ou editer un cours qui est dans la base de donnée cliquer sur Le Nav ou il y a marquer (CRUD) et choisissez le (Get) vous trouverez tout les cour et choisissez un et cliquez sur le button Delete</li>
             <br/>
             <li>3. pour voir tout les Calander qui sont dans la base de donnée cliquer sur Le nav "CRUD"et choisiesz Calander</li>
+            <br/>
             <li>4. pour effacer ou editer tout les Calander qui sont dans la base de donnée cliquer sur Le nav "CRUD"et choisiesz </li>
-            <li>B</li>
-            <li>B</li>
-            <li>B</li>
+            <br/>
+            <li>5</li>
+            <br/>
+            <li>6</li>
+            <br/>
+            <li>7</li>
         </ul>
         <br/>
-        <br/>
-       
-              <p>Under Unix, database names are case-sensitive (unlike SQL keywords),
-              so you must always refer to your database as menagerie, not as Menagerie,
-               MENAGERIE, or some other variant. This is also true for table names. (Under Windows, 
-               this restriction does not apply, although you must refer to databases and tables using 
-               the same lettercase throughout a given query. However, for a variety of reasons, the recommended 
-               best practice is always to use the same
-              lettercase that was used when the database was created.)</p>
      </div>
     </div>
         )

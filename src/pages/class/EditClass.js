@@ -33,7 +33,7 @@ class EditClass extends React.Component {
 			})
 			.then((data) => {
 				console.log(data);
-				this.props.history.push("/add");
+				this.props.history.push("/Get");
 			})
 			.catch((error) => console.log(error));
 		console.log(options);

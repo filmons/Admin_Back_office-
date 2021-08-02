@@ -1,26 +1,36 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import EditClass from './pages/class/EditClass';
-import Get from './pages/class/Get';
-import Nav from './pages/Nav/Nav';
-import Calander from './pages/clander/Calander'
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch , Redirect} from "react-router-dom";
+import Home from "./pages/Home";
+import EditClass from "./pages/class/EditClass";
+import Get from "./pages/class/Get";
+import Nav from "./pages/Nav/Nav";
+import Calander from "./pages/clander/Calander";
+import Login from "./pages/Conection/Login";
+import signup from "./pages/Conection/Signup";
+import "./App.css";
+function PrivateRoute (props) {
+
+	if (localStorage.getItem('token')){
+	  return <Route exact path ={props.path} component = {props.component} />
+	}
+	return <Route render = {()=> <Redirect to = "/login"/>}/>
+  }
 
 function App() {
-  return (
-    <div>
-      <Router>
-        <Nav/>
-      <Switch>
-      <Route exact path='/'component={Home}/>
-      <Route exact path='/Calander'component={Calander}/>
-      <Route exact path='/Get' component={Get} />
-      <Route exact path='/EditClass'component={EditClass}/>
-      </Switch>
-      </Router>
-    </div>
-   
-  );
+	return (
+		<div>
+			<Router>
+				<Nav />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<PrivateRoute path="/Calander" component={Calander} />
+					<PrivateRoute path="/Get" component={Get} />
+					<PrivateRoute path="/EditClass" component={EditClass} />
+					<Route exact path="/Login" component={Login}/>
+					<Route exact path="/signup" component={signup}/>
+				</Switch>
+			</Router>
+		</div>
+	);
 }
 export default App;

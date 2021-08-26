@@ -1,0 +1,43 @@
+
+.continer_home{
+   
+    display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 15rem 17rem 3rem;
+   
+}
+.item_home{
+    object-fit: cover;
+    object-position: 50% 50%;
+
+
+}
+.Admin_home_header{
+    display: flex;
+    font-size: 3rem;
+    color: rgb(9, 64, 58);
+    text-shadow: 0 0 0.033em #fff, 0 0 0.08em #fff;
+    /* -webkit-animation-name: flicker;
+    animation-name: flicker;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate; */
+    animation-direction: alternate;
+    
+
+}
+.Admin_home_header_two{
+    display: flex;
+    font-size: 2rem;
+    color: rgb(9, 64, 58);
+    text-shadow: 0 0 0.033em #fff, 0 0 0.08em #fff;
+
+    animation-direction: alternate;
+    
+
+}

@@ -1,53 +1,49 @@
 import React from "react";
 import axios from "axios";
+import {toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import "./login.css";
-
+toast.configure();
 class Login extends React.Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			email: "",
 			password: "",
-			errorLogin: false,
-      		errorEmail: "is impity",
+			errorEmail: "",
 			errorPassword: "",
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleClick = this.handleClick.bind(this);
 	}
-
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value,
 		});
 	};
-
 	handleClick = () => {
 		const options = {
 			email: this.state.email,
 			password: this.state.password,
 		};
-
 		axios
-			.post("http://localhost:8000/V1/sigin", options, {
+			.post("http://localhost:9000/V1/sigin", options, {
 				headers: { "content-type": "application/json" },
 			})
-			
 			.then((data) => {
 				console.log(data);
-				if(data.status === 200){
-					this.props.history.push('/Cours');
+				if (data.status === 200) {
 					localStorage.setItem("token", data.data.token);
-		
-				}else{
+					localStorage.setItem("userId" ,data.data.user.id)
+				} else {
 					this.setState({
-						errorLogin: true
-					})
+						errorLogin: true,
+					});
 				}
-				//this.props.history.push('/');
-			  })
-			.catch((error) => console.log(error));
+				toast.success("welcome to Admin page", {position: toast.POSITION.TOP_CENTER})
+				this.props.history.push("/Get");
+			})
+			.catch((error) => toast.error(error.response.data.message,{position: toast.POSITION.TOP_CENTER}));
 	};
 
 	render() {
@@ -69,21 +65,22 @@ class Login extends React.Component {
 							required
 							onChange={this.handleChange}
 						/>
-						<span></span>{this.state.errorEmail}
+						<span></span>
+						{this.state.errorEmail}
 						{this.state.errorEmail ? (
-						<span
-							style={{
-								color: "red",
-								backgroundColor: "#f005",
-								padding: "5px",
-								border: "1px solid red",
-							}}
-						>
-							Error
-						</span>
-					) : (
-						""
-					)}
+							<span
+								style={{
+									color: "red",
+									backgroundColor: "#f005",
+									padding: "5px",
+									border: "1px solid red",
+								}}
+							>
+								Error
+							</span>
+						) : (
+							""
+						)}
 
 						<label htmlFor="psw">
 							<b>Password</b>
@@ -99,7 +96,7 @@ class Login extends React.Component {
 						<button
 							onClick={this.handleClick}
 							type="submit"
-							className="signupbtn"
+							className="Loginbtn"
 						>
 							Login
 						</button>

@@ -14,15 +14,15 @@ function Nav() {
 	return (
 		<nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} `}>
 			<div className="navbar_logo">
-				<Link to="/" className="navbar_link">
-					Admin Paroisse Catholique Emanuel de Montreuil
+				<Link to="/" className="navbar_link_admin">
+					Admin Paroisse Orthodoxe Emanuel de Montreuil
 				</Link>{" "}
 			</div>
 			<ul className="navbar_links">
 				<div className="dropdown">
 					<button className="dropbtn">
 						<li className="navbar_item">
-							<Link to="#" className="navbar_link">
+							<Link to="#" className="navbar_link_admin">
 								CRUD
 							</Link>
 						</li>
@@ -30,25 +30,24 @@ function Nav() {
 					</button>
 					<div className="dropdown-content">
 						<Link to="/EditClass">Add Class</Link>
-						<Link to="/show">Show</Link>
-						<Link to="/Get">Get</Link>
+						
+						<Link to="/Get">Get and edite</Link>
 						<Link to="/Calander">Calander</Link>
 					</div>
 				</div>
-				<div>
-					<li className="navbar_item">
-						<Link to="/Signup" className="navbar_link">
-							Signup
-						</Link>
-					</li>
-					
-					</div>
-					<li className="navbar_item">
-						<Link to="/Login" className="navbar_link">
-							Login
-						</Link>
-					</li>
-				
+			</ul>
+			<ul className="navbar_links">
+				<li className="navbar_item">
+					<Link to="/Signup" className="navbar_link_admin">
+						Signup
+					</Link>
+				</li>
+
+				<li className="navbar_item">
+					<Link to="/Login" className="navbar_link_admin">
+						Login
+					</Link>
+				</li>
 			</ul>
 
 			<button className="navbar_burger" onClick={handelShowLinks}>

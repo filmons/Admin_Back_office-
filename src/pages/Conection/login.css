@@ -31,18 +31,6 @@ hr {
 	background-color: aqua;
 	border-bottom: red;
 }
-/* Set a style for all buttons */
-/* button  {
-      background-color: #04AA6D;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 9%;
-      opacity: 0.9;
-      display: flex;
-    } */
 
 button:hover {
 	opacity: 1;
@@ -55,10 +43,9 @@ button:hover {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn,
-.signupbtn {
-	float: left;
-	width: 13%;
+
+.Loginbtn{
+	width: 50%;
 }
 
 /* Add padding to container elements */
@@ -67,7 +54,7 @@ button:hover {
 	border-style: solid;
 	margin-left: 25%;
 	margin-right: 25%;
-	padding: 4rem 0rem 3rem;
+	padding: 10rem 0rem 3rem;
 }
 
 /* Clear floats */
@@ -107,19 +94,6 @@ button:hover {
 		margin-bottom: 25px;
 	}
 
-	/* Set a style for all buttons */
-	/* button  {
-            background-color: #04AA6D;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 9%;
-            opacity: 0.9;
-            display: flex;
-          } */
-
 	button:hover {
 		opacity: 1;
 	}
@@ -132,7 +106,7 @@ button:hover {
 
 	/* Float cancel and signup buttons and add an equal width */
 	.cancelbtn,
-	.signupbtn {
+	.Loginbtn {
 		float: left;
 		width: 13%;
 	}

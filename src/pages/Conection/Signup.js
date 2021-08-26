@@ -203,7 +203,7 @@ class signup extends React.Component {
 								type="submit"
 								className="signupbtn"
 							>
-								Sign Up
+								SignUp
 							</button>
 						</p>
 					</div>

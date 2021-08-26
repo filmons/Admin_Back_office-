@@ -1,12 +1,15 @@
 import React from "react";
 import axios from "axios";
 import "../class/EditClass.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import {toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 
 class EditClass extends React.Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			titre: "",
 			description_one: "",
@@ -25,17 +28,22 @@ class EditClass extends React.Component {
 			description_one: this.state.description_one,
 			description_two: this.state.description_two,
 			description_three: this.state.description_three,
+			
 		};
 		console.log(options);
+		const token = localStorage.getItem("token")
+		
 		axios
-			.post("http://localhost:8000/V1/cours", options, {
-				headers: { "content-type": "application/json" },
+			.post("http://localhost:9000/V1/cours", options, {
+				headers: { Authorization: `Bearer ${token}` }
+				
 			})
 			.then((data) => {
-				console.log(data);
+				toast.success(data.data.message , {position: toast.POSITION.TOP_CENTER});
+
 				this.props.history.push("/Get");
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => toast.error(error.response.data.message, {position: toast.POSITION.TOP_CENTER}));
 		console.log(options);
 	};
 	render() {
@@ -88,11 +96,10 @@ class EditClass extends React.Component {
 							onChange={this.handleChange}
 						/>
 
-						<button onClick={this.handleClick} className="sub_but">
+						<button onClick={this.handleClick} className="sub_but_admin">
 							{" "}
 							submite
 						</button>
-						
 					</div>
 				</div>
 			</div>
